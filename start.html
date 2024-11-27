@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Pose</title>
+    <link rel="stylesheet" href="c8.css">
+</head>
+<body>
+    <header>
+        <button class="menu">&#9776</button>
+        <h1>Yoga Pose</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="we">
+            <!-- 攝像頭預覽 -->
+            <video id="webcam" width="640" height="480" autoplay></video>
+            <button onclick="startCamera()">OPEN CAMERA</button>
+        </section>
+    </main>
+
+    <footer>
+        <!-- 底部內容 -->
+    </footer>
+
+    <!-- JavaScript 部分 -->
+    <script>
+        function startCamera() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    document.getElementById('webcam').srcObject = stream;
+                })
+                .catch(function (error) {
+                    console.log('無法開啟攝像頭:', error);
+                });
+        }
+    </script>
+</body>
+</html>

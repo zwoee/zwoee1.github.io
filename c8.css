@@ -1,0 +1,148 @@
+*
+{
+    padding : 0;
+    margin : 0;
+}
+
+header
+{
+    background-color: lightblue;
+    height: 80px;
+    width: 100%;
+}
+
+header ul
+{
+    position: absolute;
+    right:5vw;
+    top:0;
+    line-height: 80px;
+}
+
+header li
+{
+    display: inline;
+    margin-right: 4vw;
+}
+
+h1
+{
+    color: darkslategrey;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 80px;
+}
+
+header a
+{
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+header a:hover
+{
+    text-decoration: underline;
+}
+
+.menu
+{
+    display: none;
+}
+
+.we
+{
+    color: darkslategrey;
+    height: 95vh;
+    background-image: url("images/yoga\ web\ ph\ 1.jpg");
+    background-color: rgba(255, 255, 255, 0.5); /* 淡白色遮罩 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px)
+{
+    header ul
+    {
+        display: none;
+    }
+    header h1
+    {
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .menu
+    {
+        display: block;
+        background-color: transparent;
+        color: darkslategrey;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px; /* 圖片之間的間距 */
+    margin-bottom: 150px; /* 與簡介文字的間距 */
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px; /* 圖片的圓角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+
+    /* 預設透明並加入漸顯動畫 */
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.image-container img:nth-child(1) {
+    animation-delay: 0.2s; /* 第一張圖片延遲 0.2 秒顯示 */
+}
+
+.image-container img:nth-child(2) {
+    animation-delay: 0.4s; /* 第二張圖片延遲 0.4 秒顯示 */
+}
+
+.image-container img:nth-child(3) {
+    animation-delay: 0.6s; /* 第三張圖片延遲 0.6 秒顯示 */
+}
+
+/* 漸顯動畫 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* 圖片從下方上升 */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* 小螢幕時改為垂直排列 */
+        align-items: center;
+        gap: 50px; /* 垂直排列時的間距 */
+        margin-bottom: 50px; /* 小螢幕時簡介與圖片間距縮小 */
+    }
+
+    .image-container img {
+        width: 200px; /* 小螢幕時圖片縮小 */
+        height: 200px;
+    }
+}
+
