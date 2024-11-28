@@ -67,6 +67,11 @@ header a:hover
     display: none;
 }
 
+.phone
+{
+    display: none;
+}
+
 .we
 {
     color: darkslategrey;
@@ -171,6 +176,7 @@ header a:hover
     }
     .phone
     {
+        display: block;
         position: absolute;
         right: 10px;
         top: 25px;
