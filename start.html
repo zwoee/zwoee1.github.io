@@ -18,20 +18,19 @@
     </header>
     
     <main>
-        <section class="we">
-            <!-- 攝像頭預覽 -->
+        <section class="camera">
             <video id="webcam" width="640" height="480" autoplay></video>
-            <button onclick="startCamera()">OPEN CAMERA</button>
+            <button onclick="startCamera()">OPEN CAMERA</button><button onclick="stopCamera()" class="btn">停止錄製</button>
         </section>
     </main>
 
     <footer>
-        <!-- 底部內容 -->
+
     </footer>
 
-    <!-- JavaScript 部分 -->
     <script>
-        function startCamera() {
+        function startCamera() 
+        {
             navigator.mediaDevices.getUserMedia({ video: true })
                 .then(function (stream) {
                     document.getElementById('webcam').srcObject = stream;
@@ -39,6 +38,17 @@
                 .catch(function (error) {
                     console.log('無法開啟攝像頭:', error);
                 });
+        }
+
+        function stopCamera() 
+        {
+            let videoElement = document.getElementById('webcam');
+            let stream = videoElement.srcObject;
+            let tracks = stream.getTracks();
+
+            tracks.forEach(track => track.stop());
+
+            videoElement.srcObject = null;
         }
     </script>
 </body>

@@ -34,6 +34,23 @@ h1
     line-height: 80px;
 }
 
+h2
+{
+    color: darkslategrey;
+    position: absolute;
+    left: 120px;
+    top: 100px;
+    line-height: 80px;
+}
+
+main p
+{
+    position: absolute;
+    top: 130px;
+    color: darkslategrey;
+    left: 200px;
+}
+
 header a
 {
     color: darkslategrey;
@@ -55,7 +72,38 @@ header a:hover
     color: darkslategrey;
     height: 95vh;
     background-image: url("images/yoga\ web\ ph\ 1.jpg");
-    background-color: rgba(255, 255, 255, 0.5); /* 淡白色遮罩 */
+    background-color: rgba(255, 255, 255, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.camera button 
+{
+    background-color:lightblue;
+    color: darkslategrey;
+    padding: 10px 20px;
+    border-color: azure;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.camera button:hover 
+{
+    background-color:cadetblue;
+}
+
+.camera
+{
+    color: darkslategrey;
+    height: 95vh;
+    background-image: url("images/yoga\ web\ ph\ 1.jpg");
+    background-color: rgba(255, 255, 255, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -92,35 +140,33 @@ header a:hover
 .image-container {
     display: flex;
     justify-content: center;
-    gap: 150px; /* 圖片之間的間距 */
-    margin-bottom: 150px; /* 與簡介文字的間距 */
+    gap: 150px;
+    margin-bottom: 150px;
 }
 
 .image-container img {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 5px; /* 圖片的圓角 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    /* 預設透明並加入漸顯動畫 */
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
 }
 
 .image-container img:nth-child(1) {
-    animation-delay: 0.2s; /* 第一張圖片延遲 0.2 秒顯示 */
+    animation-delay: 0.2s;
 }
 
 .image-container img:nth-child(2) {
-    animation-delay: 0.4s; /* 第二張圖片延遲 0.4 秒顯示 */
+    animation-delay: 0.4s;
 }
 
 .image-container img:nth-child(3) {
-    animation-delay: 0.6s; /* 第三張圖片延遲 0.6 秒顯示 */
+    animation-delay: 0.6s;
 }
 
-/* 漸顯動畫 */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -134,14 +180,11 @@ header a:hover
 
 @media screen and (max-width: 768px) {
     .image-container {
-        flex-direction: column; /* 小螢幕時改為垂直排列 */
-        align-items: center;
-        gap: 50px; /* 垂直排列時的間距 */
-        margin-bottom: 50px; /* 小螢幕時簡介與圖片間距縮小 */
+       
     }
 
     .image-container img {
-        width: 200px; /* 小螢幕時圖片縮小 */
+        width: 200px;
         height: 200px;
     }
 }
