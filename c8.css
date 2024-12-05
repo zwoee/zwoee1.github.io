@@ -43,6 +43,14 @@ h2
     line-height: 80px;
 }
 
+h3
+{
+    color:rgb(39, 39, 85);
+    font-size: 100px;
+    position: absolute;
+    top: 400px;
+}
+
 main p
 {
     position: absolute;
