@@ -6,7 +6,7 @@
 
 header
 {
-    background-color: lightblue;
+    background-color:rgb(52, 117, 74);
     height: 80px;
     width: 100%;
 }
@@ -27,7 +27,7 @@ header li
 
 h1
 {
-    color: darkslategrey;
+    color:blanchedalmond;
     position: absolute;
     left: 120px;
     top: 0;
@@ -36,24 +36,24 @@ h1
 
 h2
 {
-    color: darkslategrey;
+    color:rgb(39, 39, 85);
     position: absolute;
-    left: 120px;
-    top: 100px;
+    left: 50%;
+    top: 190px;
     line-height: 80px;
 }
 
 main p
 {
     position: absolute;
-    top: 130px;
+    top: 300px;
     color: darkslategrey;
-    left: 200px;
+    left: 45%;
 }
 
 header a
 {
-    color: darkslategrey;
+    color: blanchedalmond;
     text-decoration: none;
 }
 
@@ -72,11 +72,25 @@ header a:hover
     display: none;
 }
 
+.what
+{
+    color: darkslategrey;
+    height: 95vh;
+    background-image: url("images/123.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .we
 {
     color: darkslategrey;
     height: 95vh;
-    background-image: url("images/yoga\ web\ ph\ 1.jpg");
+    background-image: url("images/123.webp");
     background-color: rgba(255, 255, 255, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,10 +104,10 @@ header a:hover
 
 .camera button 
 {
-    background-color:lightblue;
-    color: darkslategrey;
+    background-color:rgb(52, 117, 74);
+    color: blanchedalmond;
     padding: 10px 20px;
-    border-color: azure;
+    border-color: blanchedalmond;
     border-radius: 5px;
     margin-top: 20px;
 }
@@ -107,7 +121,7 @@ header a:hover
 {
     color: darkslategrey;
     height: 95vh;
-    background-image: url("images/yoga\ web\ ph\ 1.jpg");
+    background-image: url("images/123.webp");
     background-color: rgba(255, 255, 255, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
@@ -119,7 +133,7 @@ header a:hover
 }
 
 .image-container {
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 150px;
     margin-bottom: 150px;
