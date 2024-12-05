@@ -47,8 +47,8 @@ h3
 {
     color:rgb(39, 39, 85);
     font-size: 100px;
-    position: absolute;
-    top: 400px;
+    position: relative;
+    bottom: 50px;
 }
 
 main p
